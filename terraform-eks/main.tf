@@ -47,7 +47,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly-EK
 
 ## Create the EKS cluster
 resource "aws_eks_cluster" "k8squickstart-eks" {
-  name = "k8squickstart-cluster"
+  name = "k8s-observability"
   role_arn = aws_iam_role.eks-iam-role.arn
 
   enabled_cluster_log_types = ["api", "audit", "scheduler", "controllerManager"]
